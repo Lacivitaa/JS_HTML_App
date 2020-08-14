@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {font-family: Verdana, sans-serif;}
+    </style>
+    <script>
+        function addText(){
+            var inputTexto = document.getElementById("inputNote");
+            var tagLista = document.getElementById("tagList");
+            var tagInputColor = document.getElementById("inputColor");
+            console.log("Olá tudo bem ?");
+            console.log(inputTexto.value + " " + tagInputColor.value);
+
+            var tagLi = document.createElement("li");
+
+            tagLi.innerHTML = inputTexto.value;
+
+            tagLista.appendChild(tagLi);
+        }
+        function setSunSize(){
+            var tagSlider = document.getElementById("sunSize");
+            var tagDiv = document.getElementById("sunIcon");
+            console.log(tagSlider.value);
+            tagDiv.style.fontSize = tagSlider.value + "px";  
+        }
+    </script>
+</head>
+<body>
+    <h1>FTT - APP Note</h1>
+        <p>
+            <input type="text" id="inputNote">
+            <input type="color" id="inputColor">
+            <button onclick="addText();">Salva</button>
+        </p>
+    <input onchange="setSunSize();" type="range" min="30" max="300" value="100" class="slider" id="sunSize">
+    <div class="icon" id="sunIcon">☀</div>
+    <hr>
+    <ul id="tagList"> 
+
+    </ul>
+    <hr>
+    <!-- Emmet - https://emmet.io/ -->
+    <pre>
+        #page>div.logo+ul#navigation>li*5>a{Item $} 
+    </pre>
+    <div id="page">
+        <div class="logo"></div>
+        <ul id="navigation">
+            <li><a href="">Item 1</a></li>
+            <li><a href="">Item 2</a></li>
+            <li><a href="">Item 3</a></li>
+            <li><a href="">Item 4</a></li>
+            <li><a href="">Item 5</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- Aplicação Vanilla - HTML5, CSS3, JavaScript 6 (ECMAScript 6)
+
+
+    - Todo
+    - Agenda
+    - Cadastro
+
+-->
